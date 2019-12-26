@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en-EU">
+<style>
+.myDemo {
+  border: 4px solid #194d19;
+  padding: 3px;
+  background-color: #ffffb3;
+  border-radius: 47%;
+  padding: 10px;
+  height: 43px;
+  width: 110px;
+  margin-left: 40%;
+  margin-top: 30%;
+  
+}
+.mySmall {
+ border: 2px solid green;
+ border-radius: 47%;
+ background-color: white;
+ 
+ height: 44px;
+ /*float right with js to make it move and make it padding right */
+ width: 44px; 
+ margin-right: -5px;
+ float: right;
+ margin-top: -2px;
+ background-color: gold;
+}
+
+.myP {
+  margin-left: 45%;
+}
+.d2 {
+
+ margin-top: 10px;
+ margin-right: 10px;
+ height: 20px;
+ width: 20px;
+ background-color: #ffff00;
+ background-color: #4CAF50!important;
+}
+</style>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<div id="demo" class="myDemo">
+  <div id="small" class="mySmall" onclick="myFunction()">
+  <div class="mySmall d2" id="div2" onclick="sound()"></div> </div> 
+</div> 
+
+<audio controls style="display:none;" id="myAudio">
+  <source src="https://www.w3schools.com/graphics/bounce.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+
+<p id="text" class="myP">Online</p>
+
+<script>
+var sound = document.getElementById("myAudio");
+
+function playAudio() { 
+  sound.play(); 
+} 
+
+function myFunction() {
+  
+  var x = document.getElementById("small");
+  var y = document.getElementById("demo");
+  var z = document.getElementById("div2");
+  var getText = document.getElementById("text");
+
+  if (x.style.float == "left") { 
+    x.style.float = "right";    
+    x.style.marginRight = "-6";
+    x.style.marginTop = "-2px";    
+    y.style.background = "#ffffb3";    
+    x.style.marginTop = "-2px"
+    getText.innerHTML = "ON";
+    sound.play()
+} else {
+  x.style.float = "left";
+  y.style.background = "#EEEEEE";
+  getText.innerHTML = "Off";
+  sound.play()
+}
+
+
+}
+
+ 
+
+
+</script>
+
+
+
+</body>
+</html>
