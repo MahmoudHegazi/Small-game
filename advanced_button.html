@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-EU">
 <style>
 .myDemo {
@@ -47,7 +47,7 @@
 
 <div id="demo" class="myDemo">
   <div id="small" class="mySmall" onclick="myFunction()">
-  <div class="mySmall d2" id="div2" onclick="sound()"></div> </div> 
+  <div class="mySmall d2" id="mydivx" onclick="sound()"></div> </div> 
 </div> 
 
 <audio controls style="display:none;" id="myAudio">
@@ -68,7 +68,7 @@ function myFunction() {
   
   var x = document.getElementById("small");
   var y = document.getElementById("demo");
-  var z = document.getElementById("div2");
+  var mydiv = document.getElementById("mydivx");
   var getText = document.getElementById("text");
 
   if (x.style.float == "left") { 
@@ -76,12 +76,15 @@ function myFunction() {
     x.style.marginRight = "-6";
     x.style.marginTop = "-2px";    
     y.style.background = "#ffffb3";    
-    x.style.marginTop = "-2px"
+    x.style.marginTop = "-2px"   
     getText.innerHTML = "ON";
+    
     sound.play()
 } else {
   x.style.float = "left";
   y.style.background = "#EEEEEE";
+ 
+  
   getText.innerHTML = "Off";
   sound.play()
 }
