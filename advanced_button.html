@@ -2,7 +2,7 @@
 <html lang="en-EU">
 <style>
 .myDemo {
-  border: 4px solid #194d19;
+  border: 4px solid #00b377;
   padding: 3px;
   background-color: #ffffb3;
   border-radius: 47%;
@@ -14,7 +14,7 @@
   
 }
 .mySmall {
- border: 2px solid green;
+ border: 2px solid black;
  border-radius: 47%;
  background-color: white;
  
@@ -29,6 +29,10 @@
 
 .myP {
   margin-left: 45%;
+  text-shadow: 2px 2px;
+  font-weight: bold;
+  font-family: light-lemon;
+  font-size: 40px;
 }
 .d2 {
 
@@ -43,7 +47,7 @@
 <head>
 <title>Page Title</title>
 </head>
-<body>
+<body onload="pValue()">
 
 <div id="demo" class="myDemo">
   <div id="small" class="mySmall" onclick="myFunction()">
@@ -55,15 +59,22 @@
 Your browser does not support the audio element.
 </audio>
 
-<p id="text" class="myP">Online</p>
+<p id="text" class="myP" value=""></p>
 
 <script>
+
+
+
 var sound = document.getElementById("myAudio");
 
 function playAudio() { 
   sound.play(); 
 } 
 
+function pValue() {
+ var getText = document.getElementById("text");
+ getText.innerHTML = "ON"
+}
 function myFunction() {
   
   var x = document.getElementById("small");
